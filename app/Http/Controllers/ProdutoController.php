@@ -15,8 +15,17 @@ class ProdutoController extends Controller
     public function index()
     {
         //return "index produtos";
-        $produtos = Produto::all();
-        return dd($produtos);
+        //$produtos = Produto::all();
+        //return dd($produtos);
+        $nome = 'Fedner';
+        $idade = 39;
+        $html = "Olá bem-vindo";
+        // return view('site.empresa', [
+        //     'nome' => $nome,
+        //     'idade' => $idade,
+        //     'html' => $html
+        // ]);
+        return view('site.home',compact('nome', 'idade', 'html'));
     }
 
     /**
@@ -48,7 +57,7 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
