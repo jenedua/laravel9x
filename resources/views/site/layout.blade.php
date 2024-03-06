@@ -7,9 +7,10 @@
     <title>@yield('title')</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-    <nav class="black">
+<body >
+    <nav style="background-color: #3f3e3e; margin-bottom: 15px">
         <div class="nav-wrapper container">
           <a href="#" class="brand-logo center">Laravel automação</a>
           <ul id="nav-mobile" class="left">
