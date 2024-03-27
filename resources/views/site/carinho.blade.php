@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-<div class="row container">
+  <div class="row container">
         <h5>Carrinho: </h5>
 
         
