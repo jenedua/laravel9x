@@ -13,11 +13,16 @@
     <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
     @foreach ($categoriasMenu as $categoriaM )
-        
     <li><a href="{{route('site.categoria', $categoriaM->id )}}">{{ $categoriaM->nome }}</a></li>
     @endforeach
-    
   </ul>
+
+  <ul id='dropdown2' class='dropdown-content'>
+    <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+    <li><a href="{{route('login.logout')}}">Sair</a></li>
+  </ul>
+
+
     <nav style=" margin-bottom: 15px">
         <div class="nav-wrapper container">
           <a href="#" class="brand-logo center">Laravel automação</a>
@@ -26,6 +31,19 @@
             <li><a href="#" class="dropdown-trigger" data-target='dropdown1'>Categerias <i class="material-icons right">expand_more</i></a></li>
             <li><a href="{{route('site.carinho')}}">Carinho <span class="new bagde blue" data-badge-caption="">{{\Cart::getContent()->count()}}</span></a></li>
           </ul>
+
+          @auth
+          <ul id="nav-mobile" class="right">
+            <li><a href="#" class="dropdown-trigger" data-target='dropdown2'>Olá {{ auth()->user()->firstName}} <i class="material-icons right">expand_more</i></a></li>
+          </ul>
+          @else 
+          <ul id="nav-mobile" class="right">
+            <li><a href="{{route('login.form')}}">Login<i class="material-icons right">lock</i></a></li>
+          </ul>
+
+          @endauth
+
+
         </div>
       </nav>
     @yield('conteudo')
