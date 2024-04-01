@@ -24,7 +24,7 @@
           <ul id="nav-mobile" class="left">
             <li><a href="{{route('site.index')}}">Home</a></li>
             <li><a href="#" class="dropdown-trigger" data-target='dropdown1'>Categerias <i class="material-icons right">expand_more</i></a></li>
-            <li><a href="{{route('site.carinho')}}">Carinho</a></li>
+            <li><a href="{{route('site.carinho')}}">Carinho <span class="new bagde blue" data-badge-caption="">{{\Cart::getContent()->count()}}</span></a></li>
           </ul>
         </div>
       </nav>

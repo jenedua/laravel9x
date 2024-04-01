@@ -20,7 +20,7 @@
                 <input type="hidden" name="id" value="{{ $produto->id }}" required>
                 <input type="hidden" name="name" value="{{ $produto->nome }}" required>
                 <input type="hidden" name="price" value="{{ $produto->preco }}" required>
-                <input type="number" name="qnt" value="1" required>
+                <input type="number" min="1" name="qnt" value="1" required>
                 <input type="hidden" name="img" value="{{ $produto->imagem }}" required>
 
             <button class="btn orange large">Comprar</button>

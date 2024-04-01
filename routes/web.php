@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarinhoController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +24,12 @@ Route::get('/categoria/{id}', [SiteController::class, 'categoria'])->name('site.
 
 Route::get('/carinho', [CarinhoController::class, 'carinhoLista'])->name('site.carinho');
 Route::post('/carinho', [CarinhoController::class, 'adicionarCarinho'])->name('site.addcarinho');
+Route::post('/remover', [CarinhoController::class, 'removeCarrinho'])->name('site.removecarrinho');
+Route::post('/atualizar', [CarinhoController::class, 'atualizaCarrinho'])->name('site.atualizacarrinho');
+Route::get('/limpar', [CarinhoController::class, 'limpaCarrinho'])->name('site.limpacarrinho');
 
+Route::view('/login', 'login.form')->name('login.form');
+Route::post('/auth', [LoginController::class,'auth'])->name('login.auth');
 // Route::get('/', function () {
 //     return redirect()->route('admin.clientes');
 // });
