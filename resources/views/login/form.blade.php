@@ -19,6 +19,7 @@
             <input type="checkbox" id="remember" name="remember" style="margin-bottom: 10px;">
             <label for="remember">Lembrar-me</label><br>
             <button type="submit" style="margin-top: 10px;">Entrar</button>
+             <a href="{{route('login.create')}}"><p>ou cadastrar-se</p> </a>
         </form>
     </div>
 </div>

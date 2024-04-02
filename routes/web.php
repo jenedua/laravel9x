@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('produtos', ProdutoController::class);
-Route::resource('users', UserController::class);
+//Route::resource('produtos', ProdutoController::class);
+//Route::resource('users', UserController::class);
 
 Route::get('/',[SiteController::class,'index'])->name('site.index');
 Route::get('/produto/{slug}', [SiteController::class, 'details'])->name('site.details');
@@ -37,6 +37,7 @@ Route::get('/logout', [LoginController::class,'logout'])->name('login.logout');
 Route::get('/register', [LoginController::class,'create'])->name('login.create');
 
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard')->middleware(['auth', 'checkemail']);
+Route::get('/admin/produtos', [ProdutoController::class, 'index'])->name('admin.produtos');
 // Route::get('/', function () {
 //     return redirect()->route('admin.clientes');
 // });
