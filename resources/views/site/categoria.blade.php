@@ -26,6 +26,6 @@
         
     </div>
     <div class="row center">
-        {{ $produtos->links() }}
+        {{ $produtos->links('custom.pagination') }}
     </div>
 @endsection

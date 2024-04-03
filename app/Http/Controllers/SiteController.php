@@ -32,13 +32,15 @@ class SiteController extends Controller
 
         //Gate::authorize('ver-produto', $produto);
         //$this->authorize('verProduto', $produto);
-        if(Gate::allows('ver-produto', $produto)){
+        // if(Gate::allows('ver-produto', $produto)){
 
-            return view('site.details', compact('produto'));
-        }
-        if(Gate::denies('ver-produto', $produto)){
-            return redirect()->route('site.index');
-        }
+        //     return view('site.details', compact('produto'));
+        // }
+        // if(Gate::denies('ver-produto', $produto)){
+        //     return redirect()->route('site.index');
+        // }
+        return view('site.details', compact('produto'));
+
 
     }
     public function categoria($id){
