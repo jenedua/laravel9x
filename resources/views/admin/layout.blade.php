@@ -32,21 +32,23 @@
       </nav>
     
   
-    <ul id="slide-out" class="sidenav " >
+    <ul id="slide-out" class="sidenav ">
       <li><div class="user-view">
         <div class="background red ">
          <img src="{{asset('img/office.jpg')}}" style="opacity: 0.5"> 
         </div>
-          <a href="#user"><img class="circle" src="{{asset('img/user.jpg')}}"></a>
-          <a href="#name"><span class="white-text name">John Doe</span></a>
-          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          <img class="circle" src="{{asset('img/user.jpg')}}"></a>
+          <p>
+            <span class="white-text name">{{ auth()->user()->firstName }}</span>
+            <span class="white-text email">{{ auth()->user()->email }}</span>
+          </p>
        </div></li> 
   
         <li><a href="{{ route('admin.dashboard')}}"><i class="material-icons">dashboard</i>Dashboard</a></li>
         <li><a href="{{ route('admin.produtos')}}"><i class="material-icons">playlist_add_circle</i>Produtos</a></li>
         <li><a href="#!"><i class="material-icons">shopping_cart</i>Pedidos</a></li>
         <li><a href="#!"><i class="material-icons">bookmarks</i>Categorias</a></li>
-        <li><a href="#!"><i class="material-icons">peoples</i>Usuários</a></li>
+        <li><a href=""><i class="material-icons">peoples</i>Usuários</a></li>
     </ul>
   
 

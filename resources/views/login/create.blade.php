@@ -17,6 +17,7 @@
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" style="margin-bottom: 10px;"><br>
             <button type="submit" style="margin-top: 10px;">Cadastrar</button>
+            <a href="{{route('login.form')}}">Voltar</a>
         </form>
     </div>
 </div>
